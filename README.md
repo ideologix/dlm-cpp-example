@@ -50,10 +50,10 @@ sudo cmake --install .
 ```
 
 
-#### 2. dlmclient
+#### 2. dlm-cpp
 
-The dlmclient classes are required. However in this project those are included as git submodule.
+The [dlm-cpp](https://github.com/ideologix/dlm-cpp] class library is required. However in this project those are included as git submodule.
 
-#### 3. RapidJSON
+#### 3. rapidjson
 
 The rapidjson json parser library is required. In this project the library is included as git submodule.
