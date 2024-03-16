@@ -4,9 +4,15 @@ This is simple example that covers all the required operations to successfully s
 
 ### Getting started
 
-To get started using this example:
+To get started using this first clone the project:
 
-1. Follow the section 1 in **Requirements**.
+```
+git clone --recursive https://github.com/ideologix/dlm-cpp-example.git
+```
+
+Then follow the steps:
+
+1. Install required libcpr library as explained in **Requirements**.
 2. Set up the API connection in main.cpp with your api details
 3. Set up SampleKey variable in main.cpp with your key
 4. To run the projects, execute the following:
