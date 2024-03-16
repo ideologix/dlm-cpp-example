@@ -1,0 +1,6 @@
+[submodule "lib/rapidjson"]
+	path = lib/rapidjson
+	url = git@github.com:Tencent/rapidjson.git
+[submodule "lib/dlm-cpp"]
+	path = lib/dlm-cpp
+	url = git@github.com:ideologix/dlm-cpp.git
