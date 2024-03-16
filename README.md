@@ -9,8 +9,7 @@ To get started using this example:
 1. Follow the section 1 in **Requirements**.
 2. Set up the API connection in main.cpp with your api details
 3. Set up SampleKey variable in main.cpp with your key
-
-Run
+4. To run the projects, execute the following:
 
 ```
 cmake build .
@@ -52,7 +51,7 @@ sudo cmake --install .
 
 #### 2. dlm-cpp
 
-The [dlm-cpp](https://github.com/ideologix/dlm-cpp] class library is required. However in this project those are included as git submodule.
+The [dlm-cpp](https://github.com/ideologix/dlm-cpp) class library is required. However in this project those are included as git submodule.
 
 #### 3. rapidjson
 
