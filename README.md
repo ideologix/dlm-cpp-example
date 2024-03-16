@@ -63,3 +63,14 @@ The [dlm-cpp](https://github.com/ideologix/dlm-cpp) class library is required.
 The rapidjson json parser library is required.
 
 **Note**: The library is already included in this project, so no further action is needed.
+
+
+### License
+
+```
+Copyright (C) 2024 - Darko Gjorgjijoski
+Copyright (C) 2024 - IDEOLOGIX MEDIA DOOEL
+
+Licensed under GPLv2
+
+```
