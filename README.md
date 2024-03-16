@@ -38,8 +38,6 @@ Deactivating token
 
 The libcpr library is required, to install follow the guide bellow:
 
-Note: Action required.
-
 ```
 git clone https://github.com/libcpr/cpr.git
 cd cpr && mkdir build && cd build
@@ -48,11 +46,14 @@ cmake --build . --parallel
 sudo cmake --install .
 ```
 
-
 #### 2. dlm-cpp
 
-The [dlm-cpp](https://github.com/ideologix/dlm-cpp) class library is required. However in this project those are included as git submodule.
+The [dlm-cpp](https://github.com/ideologix/dlm-cpp) class library is required. 
+
+**Note**: The library is already included in this project, so no further action is needed.
 
 #### 3. rapidjson
 
-The rapidjson json parser library is required. In this project the library is included as git submodule.
+The rapidjson json parser library is required.
+
+**Note**: The library is already included in this project, so no further action is needed.
