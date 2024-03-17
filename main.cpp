@@ -27,6 +27,11 @@ int main() {
     // Declare Response
     DigitalLicenseManager::Response response;
 
+    // Create License
+    //response = DigitalLicenseManager::licenses_create(conn, {{"license_key", "XXXOJiqojfoqjXOIAXaaa"}, {"activations_limit", "5"}, {"status", "1"}, {"valid_for", "365"}});
+    //std::cout << response.get_contents();
+    //exit(1);
+
     // Declare RapidJSON document
     rapidjson::Document doc;
 
