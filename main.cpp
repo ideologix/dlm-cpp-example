@@ -39,7 +39,10 @@ int main() {
     std::string SampleKey = "K2CH-GIG1-IGC3-2N1K";
     std::string token = "";
 
-    // 1. EXAMPLE: /licenses/{key}
+    // Optional, applies to Example 1b with additional product id check.
+    std::string product_id = "149";
+
+    // 1a. EXAMPLE: /licenses/{key}
     std::cout << "Checking License Key" << std::endl;
     response = DigitalLicenseManager::licenses_get(conn, SampleKey);
     doc.Parse(response.get_contents().c_str());
@@ -52,6 +55,29 @@ int main() {
             std::cout << "- License is " + license_key + " expired." << std::endl;
         } else {
             std::cout << "- License is " + license_key + " valid." << std::endl;
+        }
+    } else {
+        std::cout << "- Invalid response" << std::endl;
+    }
+
+    // 1b. EXAMPLE: /license/{key} - With additional product id verification.
+    std::cout << "Checking License Key" << std::endl;
+    response = DigitalLicenseManager::licenses_get(conn, SampleKey);
+    doc.Parse(response.get_contents().c_str());
+    if (doc.HasMember("code") && doc.HasMember("message")) {
+        std::cout << doc["message"].GetString();
+    } else if (doc.HasMember("success") && doc["success"].GetBool()) {
+        auto is_expired = doc["data"]["is_expired"].GetBool();
+        auto l_product_id = doc["data"]["product_id"].GetInt();
+        if(l_product_id != std::stoi(product_id)) {
+            std::cout << "- Unable to verify license. Product and license does not match." << std::endl;
+        } else {
+            std::string license_key = doc["data"]["license_key"].GetString();
+            if (is_expired) {
+                std::cout << "- License is " + license_key + " expired." << std::endl;
+            } else {
+                std::cout << "- License is " + license_key + " valid." << std::endl;
+            }
         }
     } else {
         std::cout << "- Invalid response" << std::endl;
