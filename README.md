@@ -12,7 +12,7 @@ git clone --recursive https://github.com/ideologix/dlm-cpp-example.git
 
 Then follow the steps:
 
-1. Install required libcpr library as explained in **Requirements**.
+1. Install required libcurl library
 2. Set up the API connection in main.cpp with your api details
 3. Set up SampleKey variable in main.cpp with your key
 4. To run the projects, execute the following:
@@ -40,17 +40,9 @@ Deactivating token
 
 ### Requirements
 
-#### 1. libcpr 
+#### 1. libcurl 
 
-The libcpr library is required, to install follow the guide bellow:
-
-```
-git clone https://github.com/libcpr/cpr.git
-cd cpr && mkdir build && cd build
-cmake .. -DCPR_USE_SYSTEM_CURL=ON
-cmake --build . --parallel
-sudo cmake --install .
-```
+The libcurl library is required!
 
 #### 2. dlm-cpp
 
